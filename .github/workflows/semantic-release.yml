@@ -23,6 +23,9 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           run: |
-            cp semantic-tagging-config/.releaserc.json .
-            cp semantic-tagging-config/incremental-release.js .
+            echo "********************************"
+            ls -al
+            echo "********************************"
+            cp semantic-central/.releaserc.json .
+            cp semantic-central/incremental-release.js .
             npx semantic-release
