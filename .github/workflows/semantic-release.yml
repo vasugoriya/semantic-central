@@ -26,6 +26,4 @@ jobs:
             echo "********************************"
             ls -al
             echo "********************************"
-            cp .releaserc.json .
-            cp incremental-release.js .
             npx semantic-release
