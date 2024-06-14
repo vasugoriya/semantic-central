@@ -42,4 +42,6 @@ jobs:
             echo "********************************"
             cat package.json
             echo "********************************"
+            cp .releaserc.json .
+            incremental-release.js .
             npx semantic-release
