@@ -35,13 +35,13 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           run: |
-            echo "********************************"
+            echo "*************GET Files*******************"
+            wget https://rl-tag-01.s3.us-west-2.amazonaws.com/incremental-release.js
+            wget https://rl-tag-01.s3.us-west-2.amazonaws.com/.releaserc.json
             ls -al
             echo "********************************"
             cat .releaserc.json
             echo "********************************"
-            cat package.json
+            pwd
             echo "********************************"
-            cp .releaserc.json .
-            incremental-release.js .
             npx semantic-release
